@@ -20,11 +20,13 @@ CREATE TABLE members (
   identification_number VARCHAR(50) NOT NULL,
   address VARCHAR(255) NOT NULL,
   phone_number VARCHAR(20) NOT NULL,
+  memberId VARCHAR(25) NOT NULL,
   created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
   PRIMARY KEY (id),
   UNIQUE KEY unique_email (email)
 );
+
 
 -- CREATE DATABASE IF NOT EXISTS juntasdb;
 
