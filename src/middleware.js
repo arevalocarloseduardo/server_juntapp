@@ -17,6 +17,7 @@ export const verifyToken = (req, res, next) => {
   jwt.verify(req.token, 'my_secret_key', (err, authData) => {
     if (err) {
       res.sendStatus(403);
+      // res.send('Token Invalido');
     } else {
       req.authData = authData;
       next();
