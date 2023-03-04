@@ -30,7 +30,8 @@ export const deleteMember = async (req, res) => {
     const [result] = await pool.query('DELETE FROM members where id = ?', [req.params.id])
 
     if (result.affectedRows <= 0) return res.status(404).json({ message: 'member not found' })
-    res.sendStatus(204)
+    
+    res.status(200).json({ message: 'member deleted successfully' });
 
 }
 export const createMember = async (req, res) => {
