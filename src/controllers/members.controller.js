@@ -4,9 +4,9 @@ import { pool } from '../db.js'
 export const getMembers = async (req, res) => {
     try {
 
-        const ownerId = [rows] = await pool.query('SELECT * FROM members',)
+        const [rows] = await pool.query('SELECT * FROM members',)
 
-        res.json(ownerId)
+        res.json(rows)
     } catch (error) {
 
         res.status(500).json({ error: error.message });
