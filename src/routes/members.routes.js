@@ -11,6 +11,7 @@ router.get('/members/:id', ensureToken, verifyToken, getMember)
 router.post('/members', ensureToken, verifyToken, createMember)
 router.put('/members/:id', ensureToken, verifyToken, updateMember)
 router.delete('/members/:id', ensureToken, verifyToken, deleteMember)
+// router.patch('/members/:id', ensureToken, verifyToken, deleteMember)
 
 router.patch('/members/:id', ensureToken, verifyToken, updateFieldMember)
 

@@ -37,7 +37,10 @@ CREATE TABLE juntas(
     name VARCHAR(45) DEFAULT NULL,
     description VARCHAR(60) DEFAULT NULL,
     typeQuotes VARCHAR(20) DEFAULT NULL,
+    typeAmount VARCHAR(20) DEFAULT NULL,
     totalAmount int(7) DEFAULT NULL,
+    status VARCHAR(20) DEFAULT NULL,
+    memberOwnerId VARCHAR(20) DEFAULT NULL,
     quotes int(2) DEFAULT NULL,
     juntas_members INT(11) DEFAULT NULL,
     PRIMARY KEY (id) 
@@ -46,6 +49,7 @@ CREATE TABLE juntas(
 -- CREATE DATABASE IF NOT EXISTS juntasmembersdb;
 
 -- USE juntasmembersdb;
+
 
 CREATE TABLE juntas_members(
     id INT(11) NOT NULL AUTO_INCREMENT,

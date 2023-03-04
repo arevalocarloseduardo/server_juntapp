@@ -47,7 +47,7 @@ export const createMember = async (req, res) => {
 
         const [rows] = await pool.query('INSERT INTO members (first_name, last_name, email, ranking, role, date_of_birth, identification_number, address, phone_number, memberId) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)',
             [req.body.first_name, req.body.last_name, req.body.email, req.body.ranking, req.body.role, req.body.date_of_birth, req.body.identification_number, req.body.address, req.body.phone_number, req.body.memberId])
-        res.send({ id: rows.insertId, first_name, email, memberId})
+        res.send({ id: rows.insertId, first_name, email, memberId })
     } catch (error) {
         res.status(500).json({ error: error.message });
     }
