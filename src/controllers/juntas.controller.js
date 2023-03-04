@@ -17,8 +17,8 @@ export const getJunta = async (req, res) => {
 export const deleteJunta = async (req, res) => {
     const [result] = await pool.query('DELETE FROM juntas where id = ?', [req.params.id])
 
-    if (result.affectedRows <= 0) return res.status(404).json({ message: 'juntas not found' })
-    res.sendStatus(204)
+    if (result.affectedRows <= 0) return res.status(404).json({ message: 'junta not found' })
+    res.sendStatus(200).json({ message: 'junta deleted successfully' });
 
 }
 export const createJunta = async (req, res) => {
